@@ -32,7 +32,7 @@ def index():
 # Эндпоинт для отправки анкеты (POST)
 @app.route('/submit_survey', methods=['POST'])
 def submit_survey():
-    data = request.get_json()  # Получаем JSON-данные
+    data = request.get_json() 
 
     device_id = data.get('device_id')
     age = data.get('age')
@@ -116,5 +116,5 @@ def clear_surveys():
 
 
 if __name__ == '__main__':
-    init_db()  # Инициализация базы данных при запуске
+    init_db()  
     app.run(debug=True)
